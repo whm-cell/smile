@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: oauth
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        ip: 127.0.0.1
+      config:
+        server-addr: 127.0.0.1:8848
+        prefix: web-nacos # 前缀
+        group: we   # 分组
+        file-extension: yaml # 配置文件类型
+
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 开启服务注册和发现的功能
+          lowerCaseServiceId: true # 请求路径上的服务名配置为小写
